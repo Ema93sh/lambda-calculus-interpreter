@@ -22,6 +22,7 @@ main = runInputT defaultSettings loop
           case input of
             Nothing -> return ()
             Just "quit" -> return ()
+            -- TODO Just "help" -> return () 
             Just ":q" -> return ()
             Just expr -> do outputStrLn $ evaluate expr
                             loop

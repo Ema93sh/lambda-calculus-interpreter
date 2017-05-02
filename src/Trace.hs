@@ -1,7 +1,9 @@
+{-# LANGUAGE UnicodeSyntax #-}
 module Trace where
 
 import Syntax
 import Pretty
+
 
 data Trace a = Out (String, a)
 
