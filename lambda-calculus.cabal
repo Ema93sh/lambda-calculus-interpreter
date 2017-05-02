@@ -57,7 +57,7 @@ executable lambda-calculus
   -- other-extensions:
 
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.9 && <4.10 , mtl, pretty, parsec, haskeline
+  build-depends:       base >=4.9 && <4.10 , mtl, pretty, parsec, haskeline, ansi-wl-pprint
 
   -- Directories containing source files.
   hs-source-dirs:      src
