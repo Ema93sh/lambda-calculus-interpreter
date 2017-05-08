@@ -20,7 +20,7 @@ variable = do
 
 abstraction :: LambdaParser
 abstraction = do
-                 char '\\'
+                 char '\\' <|> char 'λ'
                  args <- arguments
                  char '.'
                  body <- lambdaExpr

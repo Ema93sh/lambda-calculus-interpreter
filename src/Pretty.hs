@@ -18,7 +18,7 @@ class PrettyLambda a where
 instance PrettyLambda LExpr where
   pPrint (Var x)        = char x
   pPrint expr@(App l r)  = printApp l r
-  pPrint expr            = hcat [ text "\\",
+  pPrint expr            = hcat [ text "λ",
                                         text $ args expr,
                                         text ".",
                                         pPrint $ body expr
