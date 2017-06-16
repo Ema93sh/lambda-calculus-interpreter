@@ -1,11 +1,11 @@
 {-# LANGUAGE UnicodeSyntax #-}
+
 module Trace where
 
 import Syntax
 import Pretty
 
-
-data Trace a = Out (String, a)
+data Trace a  = Out (String, a)
 
 instance Functor Trace where
   fmap = undefined
@@ -25,4 +25,4 @@ instance Monad Trace where
 
 
 trace :: LExpr -> LExpr -> Trace ()
-trace e r = Out ("→" ++ prettyReduce e r ++ "\n", ())
+trace e r = Out ("→" ++ prettyReduce e r True ++ "\n", ())
